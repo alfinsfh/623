@@ -1,4 +1,5 @@
 /* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     background: #f8f9fa;
 }
 
@@ -171,6 +172,14 @@ body {
 
 }
 
+.activity {
+    background-color: rgba(0, 0, 0, 0.34);
+    color: #fff;
+    padding: 8px;
+    font-size: 12px;
+    padding-left: 24px;
+}
+
 
 
 .hero {
@@ -186,7 +195,7 @@ body {
     justify-content: flex-start;
     /* Teks di sisi kiri */
     color: #fff;
-    padding: 4rem;
+    padding: 2rem;
 }
 
 /* Overlay untuk efek gelap/transparan di atas background */
@@ -197,7 +206,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.419) 100%);
     z-index: 1;
 }
 
@@ -206,7 +215,7 @@ body {
     position: relative;
     z-index: 2;
     /* Supaya berada di atas overlay */
-    max-width: 700px;
+
     /* Batas lebar teks agar tidak terlalu melebar */
 }
 
@@ -214,7 +223,7 @@ body {
 .hero-content h1 {
     font-size: 2rem;
     line-height: 1.4;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     /* Sesuaikan font-size dengan selera/desain */
 }
 
@@ -251,7 +260,10 @@ body {
 }
 
 @media (max-width: 768px) {
-    
+    .hero {
+        max-height: 600px;
+        object-fit: cover;
+    }
     .hero-content h1 {
         font-size: 24px;
     }
@@ -263,5 +275,251 @@ body {
     .hero-subtext {
         padding-right: 1px;
         font-size: 12px;
+    }
+}
+
+
+
+.herosubtext-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background-color: #0000003b;
+    border-top: 1px solid;
+}
+
+.herosubtext-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.herosubtext-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.herosubtext-description {
+    font-size: 16px;
+    color: #e7e7e7;
+    max-width: 400px;
+}
+
+.herosubtext-learn-more {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.herosubtext-learn-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .herosubtext-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .herosubtext-description {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+}
+.logos {
+    width: 80px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.description {
+    font-size: 24px;
+    color: #5D0225;
+    line-height: 1.6;
+    font-weight: 600;
+    font-weight: bolder;
+}
+
+.abouthis-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #5D0225;
+    padding: 2rem;
+    padding-top: 4rem;
+}
+
+.abouthis-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.abouthis-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+}
+
+.abouthis-description {
+    font-size: 16px;
+    color: #d7d7d7;
+    max-width: 560px;
+    
+}
+
+.abouthis-learn-more {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.abouthis-learn-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .abouthis-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .abouthis-description {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.subabouthis-section {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    background-color: #5D0225;
+}
+
+.subabouthis-container {
+    display: flex;
+    max-width: 1000px;
+    gap: 40px;
+    margin: 2rem;
+}
+
+.subabouthis-text {
+    flex: 1;
+}
+
+.subabouthis-year {
+    font-size: 14px;
+    color: #d7d7d7;
+    font-weight: bold;
+}
+
+.subabouthis-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+}
+
+.subabouthis-description {
+    font-size: 16px;
+    color: #d7d7d7;
+}
+
+.subabouthis-image {
+    position: relative;
+    width: 320px;
+    height: 180px;
+}
+
+.subabouthis-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.subabouthis-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    width: 100%;
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+}
+
+.subabouthis-play-button {
+    font-size: 20px;
+    color: #5D0225;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.subabouthis-video-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .subabouthis-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .subabouthis-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .subabouthis-container {
+        align-items: center;
     }
 }
